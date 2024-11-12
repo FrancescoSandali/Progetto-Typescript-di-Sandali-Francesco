@@ -1,10 +1,6 @@
 ENGLISH
 
 
-Here’s the translation in English:
-
----
-
 The code executed is purely TypeScript. Using the command configured in `package.json`, `npm run deploy` converts the TypeScript code to JavaScript.
 
 It is displayed exclusively in the console.
