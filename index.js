@@ -62,7 +62,7 @@ var City = /** @class */ (function () {
 //I'm starting to instantiate, to check in the console log
 // Create transport and user instances for testing
 var scooter1 = new Transport('scooter', 4, true);
-var scooter2 = new Transport('electric car', 1, false);
+var electricCar1 = new Transport('electric car', 1, false);
 var scooter3 = new Transport('scooter', 3, true);
 var user1 = new User('Francesco', 'Sandali', 'francesco09sandali@gmail.com', 'credit card');
 var user2 = new User('Federico', 'Cassini', 'federico.cassini@gmail.com', 'contanti');
@@ -70,14 +70,14 @@ var user3 = new User('Francesca', 'Tamalli', 'francesca.tamalli@gmail.com', 'cre
 // Create a city and add transports
 var arezzo = new City('Arezzo');
 arezzo.addTransport(scooter1);
-arezzo.addTransport(scooter2);
+arezzo.addTransport(electricCar1);
 arezzo.addTransport(scooter3);
 // Verify state and book transport
 scooter1.verifyAvailable();
 user1.bookTransport(scooter1); // Francesco books scooter1
 user2.bookTransport(scooter1); // Federico tries to book scooter1 but it's already in use
 // Verify state and try booking an already used vehicle
-scooter2.verifyAvailable();
-user3.bookTransport(scooter2); // Francesca tries to book scooter2 but it's already in use
+electricCar1.verifyAvailable();
+user3.bookTransport(electricCar1); // Francesca tries to book scooter2 but it's already in use
 // Check available vehicles in the city
 console.log('Available vehicles in Milano:', arezzo.getAvailableTransport());
