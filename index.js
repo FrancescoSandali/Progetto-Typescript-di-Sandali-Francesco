@@ -80,4 +80,4 @@ user2.bookTransport(scooter1); // Federico tries to book scooter1 but it's alrea
 electricCar1.verifyAvailable();
 user3.bookTransport(electricCar1); // Francesca tries to book scooter2 but it's already in use
 // Check available vehicles in the city
-console.log('Available vehicles in Milano:', arezzo.getAvailableTransport());
+console.log("Available vehicles in Arezzo:", arezzo.getAvailableTransport());
