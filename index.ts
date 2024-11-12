@@ -108,7 +108,7 @@ class City implements ICity{
 
 // Create transport and user instances for testing
 let scooter1 = new Transport('scooter', 4, true);
-let scooter2 = new Transport('electric car', 1, false);
+let electricCar1 = new Transport('electric car', 1, false);
 let scooter3 = new Transport('scooter', 3, true);
 
 let user1 = new User('Francesco', 'Sandali', 'francesco09sandali@gmail.com', 'credit card');
@@ -118,7 +118,7 @@ let user3 = new User('Francesca', 'Tamalli', 'francesca.tamalli@gmail.com', 'cre
 // Create a city and add transports
 let arezzo = new City('Arezzo');
 arezzo.addTransport(scooter1);
-arezzo.addTransport(scooter2); 
+arezzo.addTransport(electricCar1); 
 arezzo.addTransport(scooter3); 
 
 // Verify state and book transport
@@ -127,8 +127,8 @@ user1.bookTransport(scooter1); // Francesco books scooter1
 user2.bookTransport(scooter1); // Federico tries to book scooter1 but it's already in use
 
 // Verify state and try booking an already used vehicle
-scooter2.verifyAvailable();
-user3.bookTransport(scooter2); // Francesca tries to book scooter2 but it's already in use
+electricCar1.verifyAvailable();
+user3.bookTransport(electricCar1); // Francesca tries to book scooter2 but it's already in use
 
 // Check available vehicles in the city
 console.log('Available vehicles in Milano:', arezzo.getAvailableTransport());
